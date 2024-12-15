@@ -1,0 +1,18 @@
+$Montserrat:('Bold',700),("BoldItalic",701),("Light",300),("Regular",400);
+
+@each $name,$weight in $Montserrat {
+    @font-face {
+        font-family: "Montserrat";
+        src: url('../fonts/Montserrat/Montserrat-#{$name}.ttf');
+        font-weight: $weight;
+    }
+}
+$Raleway:('Bold',700),("Regular",400);
+
+@each $name,$weight in $Raleway {
+    @font-face {
+        font-family: "Raleway";
+        src: url('../fonts/Raleway/Raleway-#{$name}.ttf');
+        font-weight: $weight;
+    }
+}

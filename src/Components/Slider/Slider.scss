@@ -1,0 +1,119 @@
+.slider {
+    padding: 25px 100px;
+    color: #fff;
+
+    @include media(1700) {
+        padding: 15px 70px;
+    }
+    @include media(1200) {
+        padding: 15px 50px;
+    }
+    @include media(1000) {
+        padding: 15px 30px;
+    }
+    @include media(800) {
+        padding: 15px;
+    }
+    &_title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 25.83px;
+        margin-bottom: 40px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include media(1200) {
+            margin-bottom: 30px;
+        }
+        @include media(1000) {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        @include media(800) {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+    }
+
+    &_slide {
+        height: 460px !important;
+        border: 1px solid #000;
+        box-shadow: 0px 4px 4px 0px #000;
+        border-radius: 10px;
+        overflow: hidden;
+        user-select: none;
+        @include media(1500) {
+            height: 420px !important;
+        }
+        @include media(1300) {
+            height: 400px !important;
+        }
+        @include media(1000) {
+            height: 350px !important;
+        }
+        @include media(800) {
+            height: 300px !important;
+        }
+        @include media(600) {
+            height: 260px !important;
+        }
+        @include media(500) {
+            height: 230px !important;
+        }
+        @include media(400) {
+            height: 200px !important;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &_link {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #fff;
+
+            span {
+                font-size: 30px;
+                font-weight: 900;
+            }
+        }
+
+        &_title {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 30px;
+            @include media(1000) {
+                font-size: 18px;
+            }
+            @include media(800) {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.swiper-button {
+
+    &-prev,
+    &-next {
+        &::after {
+            font-size: 25px !important;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        &.swiper-button-disabled {
+            display: none;
+        }
+    }
+}

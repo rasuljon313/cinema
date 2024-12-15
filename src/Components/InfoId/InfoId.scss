@@ -1,0 +1,107 @@
+.infoid {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    position: relative;
+    height: 700px;
+    z-index: 1;
+
+    &_btn {
+        color: #fff;
+        background-color: #149A03;
+        padding: 10px 15px;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+
+        span {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+        }
+
+    }
+
+    &_main {
+        &::after {
+            backdrop-filter: blur(10px);
+        }
+
+        &_img {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 130px;
+            width: 311px;
+            height: 460px;
+            border-radius: 10px;
+            overflow: hidden;
+            z-index: 2;
+        }
+    }
+
+    &_actors {
+        display: flex;
+        gap: 30px;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+    }
+
+}
+
+.budget {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+
+    &_card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &_title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+
+    &_text {
+        font-family: "Montserrat";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+}
+
+.video {
+    background-color: #000;
+    padding: 40px;
+    border-radius: 10px;
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 99;
+    transition: 1s;
+    &_close{
+        color: #fff;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 40px;
+    }
+    &.active {
+        top: 150px;
+    }
+}

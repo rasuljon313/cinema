@@ -1,0 +1,136 @@
+    .nav {
+    background: rgba(20, 20, 20, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+    @include media(700) {
+        padding: 15px 0;
+    }
+    @include media(500) {
+        padding: 10px 0;
+    }
+
+    &_logo{
+        img{
+            @include media(700) {
+                width: 80px;
+            }
+            @include media(500) {
+                width: 70px;
+            }
+            @include media(500) {
+                width: 60px;
+            }
+        }
+    }
+    &_menu {
+        display: none;
+        @include media(700) {
+            display: block;
+        }
+    }
+
+    &_close {
+        display: none;
+        @include media(700) {
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            img {
+                width: 20px;
+            }
+        }
+    }
+
+    &_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @include media(700) {
+            position: absolute;
+            flex-direction: column;
+            background-color: #141414;
+            top: 0;
+            right: 0;
+            padding: 40px;
+            padding-top: 70px;
+            transform: translateX(100%);
+            transition: 0.5s;
+            height: 100vh;
+            gap: 10px;
+            &.active {
+                transform: translateX(0);
+            }
+        }
+        @include media(500) {
+            padding-top: 40px;
+            gap: 0px;
+        }
+    }
+
+    &_link {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21.13px;
+        color: rgba(255, 255, 255, 0.6);
+        padding: 34px 0;
+        display: block;
+
+        @include media(1000) {
+            padding: 30px 0;
+        }
+
+        @include media(900) {
+            padding: 25px 0;
+        }
+        @include media(500) {
+            font-size: 16px;
+            padding: 20px 0;
+        }
+
+        &.active {
+            color: #fff;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background: rgba(20, 154, 3, 1);
+                position: absolute;
+                bottom: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @include media(1000) {
+                    bottom: 10px;
+                }
+
+                @include media(900) {
+                    bottom: 8px;
+                }
+                @include media(700) {
+                   bottom: 0;
+                }
+            }
+        }
+    }
+
+}
+
+.search {
+    font-size: 22px;
+}
